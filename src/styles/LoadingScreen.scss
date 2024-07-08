@@ -1,0 +1,52 @@
+.loading-overlay {
+    position: fixed; /* Use fixed to cover the entire viewport and stay in place even on scroll */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #E0F7FA; /* A lighter blue shade, soothing and unobtrusive */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Ensure it's above other content */
+    text-align: center; /* Align the text to the center */
+    
+    .loading-icon {
+        width: 35%; 
+        height: 35%; 
+        background-image: url('./assets/react.svg'); 
+        background-repeat: no-repeat;
+        background-position: center; /* Center the icon */
+        background-size: contain; /* Adjust the size to contain within the container without cropping */
+        animation: coolRotate 4s linear infinite;
+    }
+
+    .loading-text {
+        margin-top: 25px; /* Appropriate spacing from the icon */
+        font-size: 1.4em; /* Large enough for visibility without being overwhelming */
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+        color: #254d58; 
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+        opacity: 1; 
+    }
+}
+
+@keyframes coolRotate {
+    0%, 100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+    25% {
+        transform: scale(1.1) rotate(90deg);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.2) rotate(180deg);
+        opacity: 0.6;
+    }
+    75% {
+        transform: scale(1.1) rotate(270deg);
+        opacity: 0.8;
+    }
+}

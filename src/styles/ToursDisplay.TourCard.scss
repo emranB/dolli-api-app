@@ -1,0 +1,44 @@
+$bg-color: #0063b2ff;
+$highlight-color: #004a80;
+$highlight-color-dark: #003355;
+
+
+.card-root {
+    max-width: 345px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        transform: translateY(-10px);  // Subtle lift effect
+    }
+}
+  
+.card-media {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+  
+.card-actions {
+    padding: 0;
+    justify-content: stretch;
+    padding: 0;
+
+}
+  
+.book-now-button {
+    width: 100%;
+    justify-content: center;
+    padding: 40px;
+    background-color: $bg-color !important;
+    color: white !important;
+    padding: 5px !important;
+    transition: background-color 0.3s, transform 0.3s;
+
+    &:hover {
+        background-color: $highlight-color-dark !important;
+    }
+}
